@@ -10,9 +10,10 @@
                         Comparte tu experiencia con nuestra pastelería/cafetería. Tu opinión nos ayuda a mejorar cada día.
                     </p>
 
-                    @if (session()->has('success'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('success') }}
+                    @if ($successMessage)
+                        <div class="alert alert-success alert-dismissible" role="alert">
+                            <div>{{ $successMessage }}</div>
+                            <a class="btn-close" aria-label="close" wire:click="$set('successMessage', null)"></a>
                         </div>
                     @endif
 
