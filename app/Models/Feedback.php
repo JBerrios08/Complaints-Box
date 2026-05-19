@@ -9,6 +9,10 @@ class Feedback extends Model
 {
     use HasFactory;
 
+    // 1. Añade esta línea para forzar el nombre de la tabla
+    protected $table = 'feedbacks';
+
+    // 2. Mantén tu fillable que ya tenías
     protected $fillable = [
         'message_type',
         'branch',
