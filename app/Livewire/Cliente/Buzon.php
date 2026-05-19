@@ -12,6 +12,7 @@ class Buzon extends Component
     public string $message = '';
     public ?string $customerName = null;
     public ?string $contact = null;
+    public ?string $successMessage = null;
 
     public function mount(): void
     {
@@ -41,6 +42,13 @@ class Buzon extends Component
         'contact' => 'teléfono o email',
     ];
 
+    public function updated(string $property): void
+    {
+        if ($property !== 'successMessage') {
+            $this->successMessage = null;
+        }
+    }
+
     public function save(): void
     {
         $validated = $this->validate();
@@ -55,8 +63,9 @@ class Buzon extends Component
         ]);
 
         $this->reset(['messageType', 'branch', 'message', 'customerName', 'contact']);
+        $this->resetValidation();
 
-        session()->flash('success', 'Tu mensaje fue enviado correctamente. ¡Gracias por ayudarnos a mejorar!');
+        $this->successMessage = 'Tu mensaje fue enviado correctamente. ¡Gracias por ayudarnos a mejorar!';
     }
 
     public function render()
