@@ -1,5 +1,5 @@
-<div class="container-xl">
-    <div class="row row-cards row-desck">
+<div class="container-xl py-4">
+    <div class="row row-cards">
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-body">
@@ -15,46 +15,34 @@
                     <div class="row">
                         <div class="col-lg-4 col-sm-12 mt-2">
                             <div class="card card-sm">
-                                <a href="/buzon" class="d-block"><img
-                                        src="{{ asset('dist/img/general/Felicitacion.jpg') }}" class="card-img-top"></a>
-                                <div class="card-body">
-                                    <div class="text-center">
-                                        <a href="/buzon" class="text-secondary">
-                                            <h2>
-                                                Felicitacion
-                                            </h2>
-                                        </a>
-                                    </div>
+                                <a href="{{ url('/buzon?tipo=felicitacion') }}" class="d-block"><img
+                                        src="{{ asset('dist/img/general/Felicitacion.jpg') }}" class="card-img-top" alt="Felicitación"></a>
+                                <div class="card-body text-center">
+                                    <a href="{{ url('/buzon?tipo=felicitacion') }}" class="text-secondary text-decoration-none">
+                                        <h2>Felicitación</h2>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-sm-12 mt-2">
                             <div class="card card-sm">
-                                <a href="#" class="d-block"><img src="{{ asset('dist/img/general/Queja.jpg') }}"
-                                        class="card-img-top"></a>
-                                <div class="card-body">
-                                    <div class="text-center">
-                                        <a href="#" class="text-secondary">
-                                            <h2>
-                                                Queja
-                                            </h2>
-                                        </a>
-                                    </div>
+                                <a href="{{ url('/buzon?tipo=queja') }}" class="d-block"><img src="{{ asset('dist/img/general/Queja.jpg') }}"
+                                        class="card-img-top" alt="Queja"></a>
+                                <div class="card-body text-center">
+                                    <a href="{{ url('/buzon?tipo=queja') }}" class="text-secondary text-decoration-none">
+                                        <h2>Queja</h2>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-sm-12 mt-2">
                             <div class="card card-sm">
-                                <a href="#" class="d-block"><img
-                                        src="{{ asset('dist/img/general/Comentario.jpg') }}" class="card-img-top"></a>
-                                <div class="card-body">
-                                    <div class="text-center">
-                                        <a href="#" class="text-secondary">
-                                            <h2>
-                                                Comentario
-                                            </h2>
-                                        </a>
-                                    </div>
+                                <a href="{{ url('/buzon?tipo=comentario') }}" class="d-block"><img
+                                        src="{{ asset('dist/img/general/Comentario.jpg') }}" class="card-img-top" alt="Comentario"></a>
+                                <div class="card-body text-center">
+                                    <a href="{{ url('/buzon?tipo=comentario') }}" class="text-secondary text-decoration-none">
+                                        <h2>Comentario</h2>
+                                    </a>
                                 </div>
                             </div>
                         </div>
